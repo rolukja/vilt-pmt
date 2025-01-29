@@ -21,7 +21,7 @@ trait GlobalModel
      *
      * @static
      */
-    public static function findWithCache(int $id, $columns = ['*']):
+    public static function findWithCache(int $id, $columns = ['*'])
     {
         $cacheName = 'Model:' . static::class . ':' . $id . ':' . implode('_', $columns);
 
