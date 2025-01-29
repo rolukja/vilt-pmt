@@ -68,7 +68,7 @@ return [
         */
 
         'use' => [
-            // Reliese\Database\Eloquent\BitBooleans::class,
+            \App\Models\Trait\GlobalModel::class,
             // Reliese\Database\Eloquent\BlamableBehavior::class,
         ],
 
@@ -170,7 +170,7 @@ return [
         |
         */
 
-        'base_files' => false,
+        'base_files' => true,
 
         /*
         |--------------------------------------------------------------------------
@@ -214,7 +214,7 @@ return [
         |   i.e. if class name(plural) matches table name, then table name will not be added
         */
 
-        'qualified_tables' => false,
+        'qualified_tables' => NULL,
 
         /*
         |--------------------------------------------------------------------------
@@ -229,7 +229,7 @@ return [
         */
 
         'hidden' => [
-            '*secret*', '*password', '*token',
+            '*secret*', '*password', '*token'
         ],
 
         /*
@@ -280,11 +280,17 @@ return [
         */
 
         'except' => [
+            'sessions',
+            'cache',
+            'cache_locks',
             'migrations',
+            'jobs',
+            'job_batches',
             'failed_jobs',
             'password_resets',
             'personal_access_tokens',
             'password_reset_tokens',
+            'users',
         ],
 
         /*
@@ -372,8 +378,8 @@ return [
         |                       generates Post::user() and User::posts()
         */
 
-        'relation_name_strategy' => 'related',
-        // 'relation_name_strategy' => 'foreign_key',
+        //'relation_name_strategy' => 'related',
+        'relation_name_strategy' => 'foreign_key',
 
         /*
          |--------------------------------------------------------------------------
@@ -460,7 +466,7 @@ return [
         | NOTE: This requires PHP 7.0 or later.
         |
         */
-        'enable_return_types' => false,
+        'enable_return_types' => true,
     ],
 
     /*
