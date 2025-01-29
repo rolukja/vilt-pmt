@@ -33,7 +33,7 @@ Contributions are welcome! Whether it’s bug fixes, new features, or suggestion
 
 ## License
 
-This project is licensed under the [MIT License]. It is free to use, modify, and distribute. Any liability for damages resulting from the use of the tool is disclaimed.
+This project is licensed under the [MIT License](./LICENSE). It is free to use, modify, and distribute. Any liability for damages resulting from the use of the tool is disclaimed.
 
 ---
 
