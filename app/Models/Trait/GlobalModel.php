@@ -9,6 +9,8 @@
 namespace App\Models\Trait;
 
 use Illuminate\Support\Facades\Cache;
+use Schema;
+use Str;
 
 trait GlobalModel
 {
