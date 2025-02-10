@@ -1,5 +1,6 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import {ref, onMounted, onBeforeUnmount} from "vue";
+import {Link} from '@inertiajs/vue3';
 
 // Zustände für Sidebar und Mobile-Check
 const isSidebarOpen = ref(true);
@@ -48,6 +49,16 @@ onBeforeUnmount(() => {
   window.removeEventListener("resize", checkMobile);
   document.removeEventListener("click", closeSidebarOnClickOutside);
 });
+
+
+const links = [
+  {name: "Dashboard", href: route('dashboard')},
+  {name: "Projects", href: route('project.index')},
+  {name: "Tasks", href: route('task.index')},
+  {name: "Team", href: "#"},
+];
+
+
 </script>
 
 <template>
@@ -64,8 +75,9 @@ onBeforeUnmount(() => {
         <h1 class="text-lg font-bold">Admin</h1>
       </div>
       <nav class="mt-4">
-        <a href="#" class="block p-2 hover:bg-gray-700">Link 1</a>
-        <a href="#" class="block p-2 hover:bg-gray-700">Link 2</a>
+        <Link v-for="link in links" :key="link.name"
+              :href="link.href" class="block p-2 hover:bg-gray-700">{{ link.name }}
+        </Link>
       </nav>
     </div>
 
@@ -96,7 +108,7 @@ onBeforeUnmount(() => {
 
       <!-- Main Content Area -->
       <main class="p-4">
-        <slot />
+        <slot/>
       </main>
     </div>
   </div>
