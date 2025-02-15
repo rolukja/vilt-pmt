@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Task;
-use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -18,7 +19,7 @@ class TaskController extends Controller
      */
     public function index(): Response
     {
-        return Inertia::render('Task/Index', [
+        return Inertia::render('Admin/Task/Index', [
                 'items' => Task::all(),
         ]);
     }
@@ -30,7 +31,7 @@ class TaskController extends Controller
      */
     public function create(): Response
     {
-        return Inertia::render('Task/Form');
+        return Inertia::render('Admin/Task/Form');
     }
 
     /**
@@ -59,7 +60,7 @@ class TaskController extends Controller
      */
     public function show(Task $task): Response
     {
-        return Inertia::render('Task/Show', [
+        return Inertia::render('Admin/Task/Show', [
                 'data' => $task
             ]);
     }
@@ -72,7 +73,7 @@ class TaskController extends Controller
      */
     public function edit(Task $task): Response
     {
-        return Inertia::render('Task/Form', [
+        return Inertia::render('Admin/Task/Form', [
                 'data' => $task
             ]);
     }

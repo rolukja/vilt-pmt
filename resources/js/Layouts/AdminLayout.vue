@@ -53,8 +53,8 @@ onBeforeUnmount(() => {
 
 const links = [
   {name: "Dashboard", href: route('dashboard')},
-  {name: "Projects", href: route('project.index')},
-  {name: "Tasks", href: route('task.index')},
+  {name: "Projects", href: route('admin.project.index')},
+  {name: "Tasks", href: route('admin.task.index')},
   {name: "Team", href: "#"},
 ];
 
@@ -69,14 +69,14 @@ const links = [
         'transform -translate-x-full': !isSidebarOpen && isMobile,
         'transition-transform duration-300 ease-in-out': true,
       }"
-        class="sidebar w-64 bg-gray-800 text-white fixed h-screen"
+        class="sidebar w-64 bg-amber-800 text-white fixed h-screen"
     >
       <div class="p-4">
         <h1 class="text-lg font-bold">Admin</h1>
       </div>
       <nav class="mt-4">
         <Link v-for="link in links" :key="link.name"
-              :href="link.href" class="block p-2 hover:bg-gray-700">{{ link.name }}
+              :href="link.href" class="block p-2 hover:bg-red-700">{{ link.name }}
         </Link>
       </nav>
     </div>
