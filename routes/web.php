@@ -27,3 +27,11 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+
+
+Route::group([
+    'prefix'     => 'project',
+], static function () {
+    Route::get('/', [\App\Http\Controllers\ProjectController::class, 'index'])
+        ->name('project.index');
+});
