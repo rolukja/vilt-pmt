@@ -29,6 +29,13 @@ Route::middleware([
 });
 
 
+Route::group([
+    'prefix' => 'kanban',
+], static function () {
+    Route::get('/{pID}', [App\Http\Controllers\KanbanController::class, 'index'])
+        ->name('kanban.index');
+});
+
 
 Route::name('project.')->group(function () {
     Route::get('/project', [App\Http\Controllers\ProjectController::class, 'index'])->name('index');
