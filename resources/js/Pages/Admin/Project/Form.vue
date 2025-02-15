@@ -15,9 +15,9 @@ const form = reactive({
 
 const submit = () => {
   if (form.id) {
-    router.put(route('project.update', form.id), form);
+    router.put(route('admin.project.update', form.id), form);
   } else {
-    router.post(route('project.store'), form);
+    router.post(route('admin.project.store'), form);
   }
 };
 </script>

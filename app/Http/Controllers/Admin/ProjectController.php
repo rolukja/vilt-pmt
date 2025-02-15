@@ -45,11 +45,10 @@ class ProjectController extends Controller
          //Dynamisch erstellen
          Project::create($request->validate([
                 'name' => ['required'],
-'description' => ['required'],
-
+                'description' => ['required'],
          ]));
 
-        return Redirect::route('project.index')->with('success', 'Project created.');
+        return Redirect::route('admin.project.index')->with('success', 'Project created.');
     }
 
     /**
@@ -92,21 +91,9 @@ class ProjectController extends Controller
                 'description' => ['required'],
         ]));
 
-        return Redirect::route('project.index')->with('success', 'Project updated.');
+        return Redirect::route('admin.project.index')->with('success', 'Project updated.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param Project $project
-     * @return RedirectResponse
-     */
-    public function destroy(Project $project): RedirectResponse
-    {
-        $project->delete();
-
-        return Redirect::back()->with('success', 'Project restored.');
-    }
 }
 
 

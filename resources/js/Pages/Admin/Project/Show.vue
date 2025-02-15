@@ -7,16 +7,16 @@ const props = defineProps({
 });
 
 const createNew = () => {
-  router.visit(route('project.create'));
+  router.visit(route('admin.project.create'));
 };
 
 const edit = (id) => {
-  router.visit(route('project.edit', id));
+  router.visit(route('admin.project.edit', id));
 };
 
 const remove = (id) => {
   if (confirm('Are you sure you want to delete this project?')) {
-    router.delete(route('project.destroy', id));
+    router.delete(route('admin.project.destroy', id));
   }
 };
 </script>

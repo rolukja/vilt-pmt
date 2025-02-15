@@ -7,16 +7,16 @@ const props = defineProps({
 });
 
 const createNew = () => {
-  router.visit(route('task.create'));
+  router.visit(route('admin.task.create'));
 };
 
 const edit = (id) => {
-  router.visit(route('task.edit', id));
+  router.visit(route('admin.task.edit', id));
 };
 
 const remove = (id) => {
   if (confirm('Are you sure you want to delete this task?')) {
-    router.delete(route('task.destroy', id));
+    router.delete(route('admin.task.destroy', id));
   }
 };
 </script>

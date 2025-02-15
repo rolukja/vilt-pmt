@@ -52,8 +52,8 @@ onBeforeUnmount(() => {
 
 
 const links = [
-  {name: "Dashboard", href: route('dashboard')},
   {name: "Projects", href: route('project.index')},
+  {name: "Admin", href: route('admin.overview.index')},
 ];
 
 

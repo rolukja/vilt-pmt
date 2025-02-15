@@ -49,7 +49,7 @@ class TaskController extends Controller
 
          ]));
 
-        return Redirect::route('task.index')->with('success', 'Task created.');
+        return Redirect::route('admin.task.index')->with('success', 'Task created.');
     }
 
     /**
@@ -93,7 +93,7 @@ class TaskController extends Controller
 
         ]));
 
-        return Redirect::route('task.index')->with('success', 'Task updated.');
+        return Redirect::route('admin.task.index')->with('success', 'Task updated.');
     }
 
     /**
