@@ -12,7 +12,7 @@
         "laravel/jetstream": "^5.3",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
-        "rolukja/vilt-crud-generator": "dev-master",
+        "rolukja/vilt-crud-generator": "^1.0",
         "tightenco/ziggy": "^2.0"
     },
     "require-dev": {
@@ -78,12 +78,6 @@
             "php-http/discovery": true
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "/var/www/vilt-crud-generator"
-        }
-    ],
     "minimum-stability": "stable",
     "prefer-stable": true
 }
