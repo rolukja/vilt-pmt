@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e90028274c5a501532c5bec5d5dd54f",
+    "content-hash": "12e6dc204617c3c1790762c66c90e6fe",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -3910,17 +3910,11 @@
         },
         {
             "name": "rolukja/vilt-crud-generator",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rolukja/vilt-grud-generator.git",
-                "reference": "36300c68fd6f0b275e213229ecffc53ef1008015"
-            },
+            "version": "dev-master",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rolukja/vilt-grud-generator/zipball/36300c68fd6f0b275e213229ecffc53ef1008015",
-                "reference": "36300c68fd6f0b275e213229ecffc53ef1008015",
-                "shasum": ""
+                "type": "path",
+                "url": "/var/www/vilt-crud-generator",
+                "reference": "406e1b121fb27691872d42684280c6ffa8d72ac0"
             },
             "require": {
                 "inertiajs/inertia-laravel": "^1.0",
@@ -3947,7 +3941,16 @@
                     "Rolukja\\ViltCrudGenerator\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Rolukja\\ViltCrudGenerator\\Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/pest"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -3958,11 +3961,9 @@
                 }
             ],
             "description": "A Composer package for automatically generating CRUD files for Laravel with Inertia.js and Vue.",
-            "support": {
-                "issues": "https://github.com/rolukja/vilt-grud-generator/issues",
-                "source": "https://github.com/rolukja/vilt-grud-generator/tree/1.0.0"
-            },
-            "time": "2025-02-15T11:15:35+00:00"
+            "transport-options": {
+                "relative": false
+            }
         },
         {
             "name": "symfony/clock",
@@ -10294,7 +10295,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "rolukja/vilt-crud-generator": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
