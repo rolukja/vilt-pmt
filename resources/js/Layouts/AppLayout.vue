@@ -1,10 +1,14 @@
 <script setup>
 import {ref, onMounted, onBeforeUnmount} from "vue";
-import {Link} from '@inertiajs/vue3';
+import {Link, usePage} from '@inertiajs/vue3';
 
 // Zustände für Sidebar und Mobile-Check
 const isSidebarOpen = ref(true);
 const isMobile = ref(false);
+const page = usePage();
+const auth = page.props?.auth || {};
+console.log(auth);
+
 
 // Funktion zum Ein-/Ausblenden der Sidebar
 const toggleSidebar = () => {
@@ -53,8 +57,11 @@ onBeforeUnmount(() => {
 
 const links = [
   {name: "Projects", href: route('project.index')},
-  {name: "Admin", href: route('admin.overview.index')},
 ];
+
+if (auth.isAdmin) {
+  links.push({ name: "Admin", href: route('admin.overview.index') });
+}
 
 
 </script>
