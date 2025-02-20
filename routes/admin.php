@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group([
     'prefix'     => 'admin',
+    'middleware' => ['auth:sanctum', 'verified', 'role:admin'],
 ], static function () {
     Route::get('/overview', [AdminOverviewController::class, 'index'])
         ->name('admin.overview.index');
