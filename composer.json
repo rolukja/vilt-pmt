@@ -13,6 +13,7 @@
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
         "rolukja/vilt-crud-generator": "dev-master",
+        "rolukja/grudiator": "dev-master",
         "tightenco/ziggy": "^2.0"
     },
     "require-dev": {
@@ -82,6 +83,10 @@
         {
             "type": "path",
             "url": "/var/www/vilt-crud-generator"
+        },
+        {
+            "type": "path",
+            "url": "/var/www/grudiator"
         }
     ],
     "minimum-stability": "stable",

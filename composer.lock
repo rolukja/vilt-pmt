@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12e6dc204617c3c1790762c66c90e6fe",
+    "content-hash": "8e4dd2bb608403fc6cae0c09a2e374c6",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -3909,12 +3909,43 @@
             "time": "2024-04-27T21:32:50+00:00"
         },
         {
+            "name": "rolukja/grudiator",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "/var/www/grudiator",
+                "reference": "30cfa3e0547eae45ff1576d1700430a28e50a9c2"
+            },
+            "require": {
+                "inertiajs/inertia-laravel": "^1.0",
+                "laravel/framework": "^11.0",
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Rolukja\\Grudiator\\Providers\\PackageServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Rolukja\\Grudiator\\": "src/"
+                }
+            },
+            "description": "GRUD VILT Stack generator",
+            "transport-options": {
+                "relative": false
+            }
+        },
+        {
             "name": "rolukja/vilt-crud-generator",
             "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "/var/www/vilt-crud-generator",
-                "reference": "406e1b121fb27691872d42684280c6ffa8d72ac0"
+                "reference": "6076a270618a67a531e688448c4979ec22becd16"
             },
             "require": {
                 "inertiajs/inertia-laravel": "^1.0",
@@ -8601,16 +8632,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "72e51f7c32c5aef7c8b462195b8c599b11199893"
+                "reference": "51087f87dcce2663e1fed4dfd4e56eccd580297e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/72e51f7c32c5aef7c8b462195b8c599b11199893",
-                "reference": "72e51f7c32c5aef7c8b462195b8c599b11199893",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/51087f87dcce2663e1fed4dfd4e56eccd580297e",
+                "reference": "51087f87dcce2663e1fed4dfd4e56eccd580297e",
                 "shasum": ""
             },
             "require": {
@@ -8642,9 +8673,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.0.1"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.0.2"
             },
-            "time": "2025-02-13T12:25:43+00:00"
+            "time": "2025-02-17T20:25:51+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -10296,6 +10327,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "rolukja/grudiator": 20,
         "rolukja/vilt-crud-generator": 20
     },
     "prefer-stable": true,
