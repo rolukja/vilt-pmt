@@ -12,8 +12,9 @@
         "laravel/jetstream": "^5.3",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
-        "rolukja/vilt-crud-generator": "dev-master",
         "rolukja/grudiator": "dev-master",
+        "rolukja/vilt-crud-generator": "dev-master",
+        "spatie/laravel-permission": "^6.15",
         "tightenco/ziggy": "^2.0"
     },
     "require-dev": {
