@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e4dd2bb608403fc6cae0c09a2e374c6",
+    "content-hash": "194d7012eba98461c81fc5862861553c",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -3914,7 +3914,7 @@
             "dist": {
                 "type": "path",
                 "url": "/var/www/grudiator",
-                "reference": "30cfa3e0547eae45ff1576d1700430a28e50a9c2"
+                "reference": "ddddcb22c67b9131f9b3886b4d419f60305ec5ea"
             },
             "require": {
                 "inertiajs/inertia-laravel": "^1.0",
@@ -3945,7 +3945,7 @@
             "dist": {
                 "type": "path",
                 "url": "/var/www/vilt-crud-generator",
-                "reference": "6076a270618a67a531e688448c4979ec22becd16"
+                "reference": "36a20c783b36495ab860e7e3acff4f3960be90cd"
             },
             "require": {
                 "inertiajs/inertia-laravel": "^1.0",
@@ -3995,6 +3995,89 @@
             "transport-options": {
                 "relative": false
             }
+        },
+        {
+            "name": "spatie/laravel-permission",
+            "version": "6.15.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-permission.git",
+                "reference": "86074fcfd127f9fa7bcdf550b7c938e3beb0d65f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/86074fcfd127f9fa7bcdf550b7c938e3beb0d65f",
+                "reference": "86074fcfd127f9fa7bcdf550b7c938e3beb0d65f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/auth": "^8.12|^9.0|^10.0|^11.0|^12.0",
+                "illuminate/container": "^8.12|^9.0|^10.0|^11.0|^12.0",
+                "illuminate/contracts": "^8.12|^9.0|^10.0|^11.0|^12.0",
+                "illuminate/database": "^8.12|^9.0|^10.0|^11.0|^12.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "laravel/passport": "^11.0|^12.0",
+                "laravel/pint": "^1.0",
+                "orchestra/testbench": "^6.23|^7.0|^8.0|^9.0|^10.0",
+                "phpunit/phpunit": "^9.4|^10.1|^11.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\Permission\\PermissionServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "6.x-dev",
+                    "dev-master": "6.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Spatie\\Permission\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Permission handling for Laravel 8.0 and up",
+            "homepage": "https://github.com/spatie/laravel-permission",
+            "keywords": [
+                "acl",
+                "laravel",
+                "permission",
+                "permissions",
+                "rbac",
+                "roles",
+                "security",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-permission/issues",
+                "source": "https://github.com/spatie/laravel-permission/tree/6.15.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-02-17T19:18:01+00:00"
         },
         {
             "name": "symfony/clock",
