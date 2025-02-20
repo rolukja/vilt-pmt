@@ -21,6 +21,7 @@ services:
         volumes:
             - '.:/var/www/html'
             - '../vilt-crud-generator:/var/www/vilt-crud-generator'
+            - '../grudiator:/var/www/grudiator'
         networks:
             - sail
         depends_on:
