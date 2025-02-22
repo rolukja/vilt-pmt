@@ -59,9 +59,6 @@ const links = [
   {name: "Projects", href: route('project.index')},
 ];
 
-if (auth.isAdmin) {
-  links.push({ name: "Admin", href: route('admin.overview.index') });
-}
 
 
 </script>
@@ -81,8 +78,9 @@ if (auth.isAdmin) {
       </div>
       <nav class="mt-4">
         <Link v-for="link in links" :key="link.name"
-              :href="link.href" class="block p-2 hover:bg-gray-700">{{ link.name }}
+              :href="link.href"  :target="link.target" class="block p-2 hover:bg-gray-700">{{ link.name }}
         </Link>
+        <a v-if="auth.isAdmin" href="/admin" class="block p-2 hover:bg-gray-700">Admin</a>
       </nav>
     </div>
 

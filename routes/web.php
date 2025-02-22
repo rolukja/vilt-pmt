@@ -5,10 +5,6 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 
-include __DIR__ . '/admin.php';
-
-
-
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -35,6 +31,8 @@ Route::group([
     Route::get('/', [\App\Http\Controllers\ProjectController::class, 'index'])
         ->name('project.index');
 });
+
+
 Route::name('task.')->group(function () {
     Route::get('/task', [App\Http\Controllers\TaskController::class, 'index'])->name('index');
     Route::get('/task/create', [App\Http\Controllers\TaskController::class, 'create'])->name('create');
