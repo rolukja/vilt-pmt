@@ -7,8 +7,6 @@ const isSidebarOpen = ref(true);
 const isMobile = ref(false);
 const page = usePage();
 const auth = page.props?.auth || {};
-console.log(auth);
-
 
 // Funktion zum Ein-/Ausblenden der Sidebar
 const toggleSidebar = () => {
