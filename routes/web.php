@@ -54,3 +54,7 @@ Route::name('user.')->group(function () {
     Route::delete('/user/{user}', [App\Http\Controllers\UserController::class, 'destroy'])->name('destroy');
     Route::post('/user/{user}/restore', [App\Http\Controllers\UserController::class, 'restore'])->name('restore');
 });
+
+
+Route::get('/kanban', [\App\Http\Controllers\KanbanController::class, 'index'])
+    ->name('kanban.index');

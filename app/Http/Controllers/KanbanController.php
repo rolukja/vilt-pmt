@@ -7,13 +7,16 @@ use Inertia\Inertia;
 
 class KanbanController extends Controller
 {
-    public function index(Request $request, int $pID): \Inertia\Response
+    public function index(): \Inertia\Response
     {
-        $request->merge(['pID' => $pID]);
 
-        $request->validate([
-            'pID' => 'required|integer|exists:projects,id',
-        ]);
+        //https://vivify-ideas.github.io/vue-draggable/example/#working-with-reactive-data
+
+//        $request->merge(['pID' => $pID]);
+//
+//        $request->validate([
+//            'pID' => 'required|integer|exists:projects,id',
+//        ]);
 
         return Inertia::render('Kanban/Index');
     }
